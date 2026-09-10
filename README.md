@@ -28,7 +28,8 @@ Création d'un script d'automatisation Shell (`build_and_push.sh`) pour :
 ```bash
 chmod +x build_and_push.sh
 ./build_and_push.sh
-'''
+```
+
 ### 2. Adaptation des Manifestes Kubernetes
 
 Mise à jour du fichier de manifeste global release/kubernetes-manifests.yaml pour modifier les registres source d'origine vers l'ACR privé :
@@ -38,12 +39,15 @@ Mise à jour du fichier de manifeste global release/kubernetes-manifests.yaml po
 ### 3. Redimensionnement du Cluster (Scaling AKS)
 
 Afin de résoudre les contraintes d'allocation CPU (FailedScheduling) liées à l'exécution de 12 composants en simultané, le cluster AKS a été étendu à 2 nœuds :
+
 #### Redimensionnement du cluster AKS
+```bash 
 az aks scale --resource-group rg-aks-aymane-fresh --name aks-aymane-cluster --node-count 2
-
+```
 #### Application des configurations Kubernetes
+```bash 
 kubectl apply -f release/kubernetes-manifests.yaml
-
+```
 ## 📊 État et Déploiement des Microservices
 
 Vérification avec kubectl get pods : 100 % des composants sont au statut 1/1 Running.
@@ -69,15 +73,17 @@ redis-cart,Redis,Running,1/1
 ### 2.    Test de Résilience (Self-Healing) :
 #### Simulation d'une panne par suppression manuelle du Pod de paiement :
 
+```bash 
 kubectl delete pod -l app=paymentservice
-
+```
 Résultat : Kubernetes a automatiquement reconstruit et relancé un nouveau Pod sain en 6 secondes, sans interruption de service.
 
 ## 🌐 Exposition de l'Application
 
 #### Obtension de l'IP publique d'accès :
 
+```bash 
 kubectl get service frontend-external
- 
+``` 
 L'application e-commerce est directement accessible sur le port 80 depuis tout navigateur via http://<EXTERNAL-IP>.
 EOF
