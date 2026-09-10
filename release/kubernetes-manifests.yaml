@@ -50,7 +50,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/frontend:v0.10.6
+          image: acraymanepresh100.azurecr.io/frontend:v1
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -177,7 +177,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/adservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/adservice:v1
         ports:
         - containerPort: 9555
         env:
@@ -252,7 +252,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/currencyservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/currencyservice:v1
         ports:
         - name: grpc
           containerPort: 7000
@@ -326,7 +326,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/cartservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/cartservice:v1
         ports:
         - containerPort: 7070
         env:
@@ -504,7 +504,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/loadgenerator:v0.10.6
+        image: acraymanepresh100.azurecr.io/loadgenerator:v1
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -556,7 +556,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/recommendationservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/recommendationservice:v1
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -632,7 +632,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/checkoutservice:v0.10.6
+          image: acraymanepresh100.azurecr.io/checkoutservice:v1
           ports:
           - containerPort: 5050
           readinessProbe:
@@ -715,7 +715,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/emailservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/emailservice:v1
         ports:
         - containerPort: 8080
         env:
@@ -790,7 +790,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/paymentservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/paymentservice:v1
         ports:
         - containerPort: 50051
         env:
@@ -862,7 +862,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/shippingservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/shippingservice:v1
         ports:
         - containerPort: 50051
         env:
@@ -936,7 +936,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/productcatalogservice:v0.10.6
+        image: acraymanepresh100.azurecr.io/productcatalogservice:v1
         ports:
         - containerPort: 3550
         env:
