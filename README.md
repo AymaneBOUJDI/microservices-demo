@@ -52,19 +52,20 @@ kubectl apply -f release/kubernetes-manifests.yaml
 
 Vérification avec kubectl get pods : 100 % des composants sont au statut 1/1 Running.
 
-Service,Langage / Framework,Statut Kubernetes,Replicas
-frontend,Go,Running,1/1
-cartservice,C# (.NET),Running,1/1
-productcatalogservice,Go,Running,1/1
-currencyservice,Node.js,Running,1/1
-paymentservice,Node.js,Running,1/1
-shippingservice,Go,Running,1/1
-emailservice,Python,Running,1/1
-checkoutservice,Go,Running,1/1
-recommendationservice,Python,Running,1/1
-adservice,Java,Running,1/1
-loadgenerator,Python / Locust,Running,1/1
-redis-cart,Redis,Running,1/1
+| Service | Langage / Framework | Statut Kubernetes | Replicas |
+| :--- | :--- | :--- | :--- |
+| frontend | Go | Running | 1/1 |
+| cartservice | C# (.NET) | Running | 1/1 |
+| productcatalogservice | Go | Running | 1/1 |
+| currencyservice | Node.js | Running | 1/1 |
+| paymentservice | Node.js | Running | 1/1 |
+| shippingservice | Go | Running | 1/1 |
+| emailservice | Python | Running | 1/1 |
+| checkoutservice | Go | Running | 1/1 |
+| recommendationservice | Python | Running | 1/1 |
+| adservice | Java | Running | 1/1 |
+| loadgenerator | Python / Locust | Running | 1/1 |
+| redis-cart | Redis | Running | 1/1 |
 
 ## 🔍 Validation, Supervision & Self-Healing
 
