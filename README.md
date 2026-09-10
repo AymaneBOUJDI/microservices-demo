@@ -28,7 +28,7 @@ Création d'un script d'automatisation Shell (`build_and_push.sh`) pour :
 ```bash
 chmod +x build_and_push.sh
 ./build_and_push.sh
-
+'''
 ### 2. Adaptation des Manifestes Kubernetes
 
 Mise à jour du fichier de manifeste global release/kubernetes-manifests.yaml pour modifier les registres source d'origine vers l'ACR privé :
